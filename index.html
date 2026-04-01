@@ -514,6 +514,114 @@
     color: var(--orange);
   }
 
+  .rankings-section {
+    background: #fdf6ef;
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin: 36px 0;
+  }
+
+  .rankings-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .rankings-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 28px;
+    color: var(--text-light);
+  }
+
+  .rankings-subtitle .date-before {
+    color: #b91c1c;
+    font-weight: 700;
+  }
+
+  .rankings-subtitle .date-after {
+    color: var(--dark);
+    font-weight: 700;
+  }
+
+  .ranking-row {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .ranking-row:last-child { margin-bottom: 0; }
+
+  .ranking-keyword {
+    flex: 1;
+  }
+
+  .ranking-keyword a {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e3a6e;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+  }
+
+  .ranking-keyword a:hover {
+    color: var(--orange);
+  }
+
+  .ranking-keyword .keyword-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+
+  .ranking-positions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .rank-before {
+    font-weight: 700;
+    font-size: 0.95rem;
+    min-width: 70px;
+    text-align: center;
+  }
+
+  .rank-before.not-found { color: #b91c1c; }
+  .rank-before.low { color: #ca8a04; }
+  .rank-before.mid { color: var(--text-light); }
+
+  .rank-arrow {
+    color: var(--text-light);
+    font-size: 1.1rem;
+  }
+
+  .rank-after {
+    background: var(--dark);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border-radius: 8px;
+    min-width: 48px;
+    text-align: center;
+  }
+
+  .rank-after.target {
+    background: var(--orange);
+  }
+
   @media print {
     .comparison-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
     .snapshot-grid { grid-template-columns: repeat(3, 1fr); }
@@ -872,6 +980,126 @@
 
   <div class="callout">
     <p><strong>Same type of restaurant, same goals.</strong> Michael's Trattoria went from a dated WordPress site to a hand-built static site that loads instantly, ranks for local keywords, and costs nothing to host. We'd do the same for Doma On Main.</p>
+  </div>
+
+  <!-- Michael's keyword rankings -->
+  <div class="rankings-section">
+    <div class="rankings-title">Michael's Keyword Rankings &mdash; Before &amp; After</div>
+    <div class="rankings-subtitle"><span class="date-before">Feb 15, 2026</span> &rarr; <span class="date-after">March 17, 2026</span></div>
+
+    <div class="ranking-row">
+      <div class="ranking-keyword">
+        <a href="https://www.google.com/search?q=private+parties+wallingford+ct" target="_blank">"private parties wallingford ct"</a>
+        <div class="keyword-desc">High-value event keyword &mdash; the biggest win</div>
+      </div>
+      <div class="ranking-positions">
+        <span class="rank-before not-found">Not found</span>
+        <span class="rank-arrow">&rarr;</span>
+        <span class="rank-after">#1</span>
+      </div>
+    </div>
+
+    <div class="ranking-row">
+      <div class="ranking-keyword">
+        <a href="https://www.google.com/search?q=restaurants+wallingford+ct" target="_blank">"restaurants wallingford ct"</a>
+        <div class="keyword-desc">Broadest, most competitive keyword &mdash; the primary goal</div>
+      </div>
+      <div class="ranking-positions">
+        <span class="rank-before not-found">Not found</span>
+        <span class="rank-arrow">&rarr;</span>
+        <span class="rank-after">#1</span>
+      </div>
+    </div>
+
+    <div class="ranking-row">
+      <div class="ranking-keyword">
+        <a href="https://www.google.com/search?q=italian+restaurant+wallingford+ct" target="_blank">"italian restaurant wallingford ct"</a>
+        <div class="keyword-desc">Core niche keyword</div>
+      </div>
+      <div class="ranking-positions">
+        <span class="rank-before low">#9</span>
+        <span class="rank-arrow">&rarr;</span>
+        <span class="rank-after">#1</span>
+      </div>
+    </div>
+
+    <div class="ranking-row">
+      <div class="ranking-keyword">
+        <a href="https://www.google.com/search?q=best+italian+restaurant+wallingford" target="_blank">"best italian restaurant wallingford"</a>
+        <div class="keyword-desc">High-intent "best" keyword</div>
+      </div>
+      <div class="ranking-positions">
+        <span class="rank-before not-found">Not found</span>
+        <span class="rank-arrow">&rarr;</span>
+        <span class="rank-after">#1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Doma's current rankings -->
+  <div class="rankings-section" style="background: #fef2f2;">
+    <div class="rankings-title">Where Doma On Main Ranks Today</div>
+    <div class="rankings-subtitle">Current Google rankings &rarr; <span class="date-after">Our goal</span></div>
+
+    <div class="ranking-row">
+      <div class="ranking-keyword">
+        <a href="https://www.google.com/search?q=restaurants+in+branford+ct" target="_blank">"restaurants in branford ct"</a>
+        <div class="keyword-desc">Broadest local keyword &mdash; highest traffic potential</div>
+      </div>
+      <div class="ranking-positions">
+        <span class="rank-before low">~#5</span>
+        <span class="rank-arrow">&rarr;</span>
+        <span class="rank-after target">Top 3</span>
+      </div>
+    </div>
+
+    <div class="ranking-row">
+      <div class="ranking-keyword">
+        <a href="https://www.google.com/search?q=italian+restaurant+branford+ct" target="_blank">"italian restaurant branford ct"</a>
+        <div class="keyword-desc">Core niche keyword &mdash; your direct category</div>
+      </div>
+      <div class="ranking-positions">
+        <span class="rank-before low">~#7</span>
+        <span class="rank-arrow">&rarr;</span>
+        <span class="rank-after target">Top 3</span>
+      </div>
+    </div>
+
+    <div class="ranking-row">
+      <div class="ranking-keyword">
+        <a href="https://www.google.com/search?q=pizza+branford+ct" target="_blank">"pizza branford ct"</a>
+        <div class="keyword-desc">Strong position already &mdash; push to #1</div>
+      </div>
+      <div class="ranking-positions">
+        <span class="rank-before mid">~#2</span>
+        <span class="rank-arrow">&rarr;</span>
+        <span class="rank-after target">#1</span>
+      </div>
+    </div>
+
+    <div class="ranking-row">
+      <div class="ranking-keyword">
+        <a href="https://www.google.com/search?q=private+parties+branford+ct" target="_blank">"private parties branford ct"</a>
+        <div class="keyword-desc">High-value event keyword &mdash; big opportunity</div>
+      </div>
+      <div class="ranking-positions">
+        <span class="rank-before low">~#5</span>
+        <span class="rank-arrow">&rarr;</span>
+        <span class="rank-after target">Top 3</span>
+      </div>
+    </div>
+
+    <div class="ranking-row">
+      <div class="ranking-keyword">
+        <a href="https://www.google.com/search?q=catering+branford+ct" target="_blank">"catering branford ct"</a>
+        <div class="keyword-desc">Not ranking at all &mdash; biggest growth opportunity</div>
+      </div>
+      <div class="ranking-positions">
+        <span class="rank-before not-found">Not found</span>
+        <span class="rank-arrow">&rarr;</span>
+        <span class="rank-after target">Page 1</span>
+      </div>
+    </div>
   </div>
 </div>
 
